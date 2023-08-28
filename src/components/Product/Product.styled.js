@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  width: 60%;
+  width: 70%;
   margin: auto;
   margin-top: 72px;
 `;
@@ -11,7 +11,9 @@ export const ImageWrapper = styled.div`
   flex: 1;
 `;
 
-export const Images = styled.div``;
+export const Images = styled.div`
+  margin-top: 20px;
+`;
 
 export const ProductInfo = styled.div`
   flex: 1;
@@ -37,18 +39,18 @@ export const Detail = styled.p`
 export const PriceWrapper = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 8px;
 `;
 
 export const Price = styled.div`
   font-weight: 700;
   font-size: 24px;
-  margin-bottom: 8px;
 `;
 
 export const Discount = styled.div`
   color: #ff7d1a;
   background-color: hsl(25, 100%, 94%);
-  padding: 4px 8px;
+  padding: 2px 8px;
   border-radius: 4px;
   font-weight: 700;
   margin-left: 12px;
@@ -70,18 +72,17 @@ export const AmountWrapper = styled.div`
   display: flex;
   align-items: center;
   background-color: #f6f8fc;
-  padding: 10px 16px;
+  padding: 12px 16px;
   border-radius: 5px;
 `;
 
 export const Amount = styled.div`
   font-weight: 700;
-  padding: 0px 44px;
+  padding: 0px 36px;
 `;
 
 export const AddToCart = styled.button`
   display: flex;
-
   padding: 12px 42px;
   border: none;
   border-radius: 5px;
