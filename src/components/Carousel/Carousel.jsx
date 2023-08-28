@@ -10,6 +10,7 @@ import {
 
 import { useDispatch } from "react-redux";
 import { setOpen } from "../../redux/features/carousel/carouselSlice";
+
 import big1 from "../../images/image-product-1.jpg";
 import big2 from "../../images/image-product-2.jpg";
 import big3 from "../../images/image-product-3.jpg";
@@ -18,7 +19,8 @@ import small1 from "../../images/image-product-1-thumbnail.jpg";
 import small2 from "../../images/image-product-2-thumbnail.jpg";
 import small3 from "../../images/image-product-3-thumbnail.jpg";
 import small4 from "../../images/image-product-4-thumbnail.jpg";
-
+import leftArrow from "../../images/icon-previous.svg";
+import rightArrow from "../../images/icon-next.svg";
 const Carousel = () => {
   const [image, setImage] = useState("small1");
   const dispatch = useDispatch();
@@ -31,10 +33,48 @@ const Carousel = () => {
     setImage(e.target.className);
   };
 
+  const handleRightClick = () => {
+    if (image === "small1") {
+      setImage("small2");
+    } else if (image === "small2") {
+      setImage("small3");
+    } else if (image === "small3") {
+      setImage("small4");
+    } else if (image === "small4") {
+      setImage("small1");
+    }
+  };
+
+  const handleLeftClick = () => {
+    if (image === "small1") {
+      setImage("small4");
+    } else if (image === "small4") {
+      setImage("small3");
+    } else if (image === "small3") {
+      setImage("small2");
+    } else if (image === "small2") {
+      setImage("small1");
+    }
+  };
+
   return (
     <Container>
       <Background onClick={handleClick} />
       <Wrapper>
+        <img
+          src={leftArrow}
+          alt=""
+          style={{
+            position: "absolute",
+            display: "flex",
+            top: "35%",
+            backgroundColor: "white",
+            borderRadius: "100%",
+            padding: 14,
+            left: -22,
+          }}
+          onClick={handleLeftClick}
+        />
         <Big>
           <img
             src={big1}
@@ -81,6 +121,20 @@ const Carousel = () => {
             }}
           />
         </Big>
+        <img
+          src={rightArrow}
+          alt=""
+          style={{
+            position: "absolute",
+            display: "flex",
+            top: "35%",
+            backgroundColor: "white",
+            borderRadius: "100%",
+            padding: 14,
+            right: -22,
+          }}
+          onClick={handleRightClick}
+        />
         <Small>
           <SmallWrapper>
             <img
