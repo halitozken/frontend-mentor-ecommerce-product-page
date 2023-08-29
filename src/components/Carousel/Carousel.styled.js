@@ -4,6 +4,10 @@ export const Container = styled.div`
   display: flex;
   text-align: center;
   justify-content: center;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Wrapper = styled.div`

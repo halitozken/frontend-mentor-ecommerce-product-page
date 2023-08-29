@@ -2,16 +2,30 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   position: absolute;
-  top: 10%;
-  right: 5%;
-  width: 375px;
+  top: 22%;
+  width: auto;
   height: auto;
-  border-radius: 0.5em;
   background-color: white;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   font-size: 24px;
+  right: 1%;
+  left: 1%;
+  border-radius: 0.5em;
+  @media only screen and (min-width: 768px) {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 375px;
+    height: auto;
+    border-radius: 0.5em;
+    background-color: white;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+      rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    font-size: 24px;
+  }
 `;
 
 export const Title = styled.div`

@@ -15,6 +15,10 @@ import {
   Price,
   Detail,
   ImageWrapper,
+  Image,
+  PriceDiscount,
+  LeftArrow,
+  RightArrow,
 } from "./Product.styled";
 
 import big1 from "../../images/image-product-1.jpg";
@@ -28,6 +32,9 @@ import small4 from "../../images/image-product-4-thumbnail.jpg";
 import minus from "../../images/icon-minus.svg";
 import plus from "../../images/icon-plus.svg";
 import cart from "../../images/icon-cart-button.svg";
+import left from "../../images/icon-previous.svg";
+import right from "../../images/icon-next.svg";
+
 import { useDispatch, useSelector } from "react-redux";
 import { addProduct } from "../../redux/features/cart/cartSlice";
 import { setOpen } from "../../redux/features/carousel/carouselSlice";
@@ -73,45 +80,62 @@ const Product = () => {
     }
   };
 
+  const handleRightClick = () => {
+    if (image === "image1") {
+      setImage("image2");
+    } else if (image === "image2") {
+      setImage("image3");
+    } else if (image === "image3") {
+      setImage("image4");
+    } else if (image === "image4") {
+      setImage("image1");
+    }
+  };
+
+  const handleLeftClick = () => {
+    if (image === "image1") {
+      setImage("image4");
+    } else if (image === "image4") {
+      setImage("image3");
+    } else if (image === "image3") {
+      setImage("image2");
+    } else if (image === "image2") {
+      setImage("image1");
+    }
+  };
+
   return (
     <Container>
       <ImageWrapper>
-        <img
+        <LeftArrow src={left} onClick={handleLeftClick} />
+        <Image
           src={big1}
           alt=""
           style={{
-            width: "400px",
-            borderRadius: "1.5em",
             display: image === "image1" ? true : "none",
           }}
           onClick={handleCarousel}
         />
-        <img
+        <Image
           src={big2}
           alt=""
           style={{
-            width: "400px",
-            borderRadius: "1.5em",
             display: image === "image2" ? true : "none",
           }}
           onClick={handleCarousel}
         />
-        <img
+        <Image
           src={big3}
           alt=""
           style={{
-            width: "400px",
-            borderRadius: "1.5em",
             display: image === "image3" ? true : "none",
           }}
           onClick={handleCarousel}
         />
-        <img
+        <Image
           src={big4}
           alt=""
           style={{
-            width: "400px",
-            borderRadius: "1.5em",
             display: image === "image4" ? true : "none",
           }}
           onClick={handleCarousel}
@@ -125,7 +149,7 @@ const Product = () => {
             style={{
               width: "80px",
               borderRadius: "0.5em",
-              marginRight: "24px",
+              marginRight: "44px",
             }}
             onClick={handleClick}
           />
@@ -136,7 +160,7 @@ const Product = () => {
             style={{
               width: "80px",
               borderRadius: "0.5em",
-              marginRight: "24px",
+              marginRight: "44px",
             }}
             onClick={handleClick}
           />
@@ -147,7 +171,7 @@ const Product = () => {
             style={{
               width: "80px",
               borderRadius: "0.5em",
-              marginRight: "24px",
+              marginRight: "44px",
             }}
             onClick={handleClick}
           />
@@ -158,11 +182,11 @@ const Product = () => {
             style={{
               width: "80px",
               borderRadius: "0.5em",
-              marginRight: "24px",
             }}
             onClick={handleClick}
           />
         </Images>
+        <RightArrow src={right} onClick={handleRightClick} />
       </ImageWrapper>
       <ProductInfo>
         <Brand>SNEAKER COMPANY</Brand>
@@ -175,10 +199,13 @@ const Product = () => {
           the weather can offer.
         </Detail>
         <PriceWrapper>
-          <Price>$125.00</Price>
-          <Discount>50%</Discount>
+          <PriceDiscount>
+            <Price>$125.00</Price>
+            <Discount>50%</Discount>
+          </PriceDiscount>
+          <Preprice>$250.00</Preprice>
         </PriceWrapper>
-        <Preprice>$250.00</Preprice>
+
         <CartWrapper>
           <AmountWrapper>
             <img

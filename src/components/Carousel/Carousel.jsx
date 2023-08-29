@@ -68,10 +68,11 @@ const Carousel = () => {
             position: "absolute",
             display: "flex",
             top: "35%",
+            left: -22,
+
             backgroundColor: "white",
             borderRadius: "100%",
             padding: 14,
-            left: -22,
           }}
           onClick={handleLeftClick}
         />
@@ -142,7 +143,10 @@ const Carousel = () => {
               src={small1}
               alt=""
               width={90}
-              style={{ borderRadius: "1em" }}
+              style={{
+                borderRadius: "1em",
+                border: image === "small1" ? "2px solid orange" : null,
+              }}
               onClick={(e) => handleClickImage(e)}
             />
           </SmallWrapper>
@@ -152,7 +156,10 @@ const Carousel = () => {
               src={small2}
               alt=""
               width={90}
-              style={{ borderRadius: "1em" }}
+              style={{
+                borderRadius: "1em",
+                border: image === "small2" ? "2px solid orange" : null,
+              }}
               onClick={(e) => handleClickImage(e)}
             />
           </SmallWrapper>
@@ -162,7 +169,10 @@ const Carousel = () => {
               src={small3}
               alt=""
               width={90}
-              style={{ borderRadius: "1em" }}
+              style={{
+                borderRadius: "1em",
+                border: image === "small3" ? "2px solid orange" : null,
+              }}
               onClick={(e) => handleClickImage(e)}
             />
           </SmallWrapper>
@@ -173,7 +183,10 @@ const Carousel = () => {
               src={small4}
               alt=""
               width={90}
-              style={{ borderRadius: "1em" }}
+              style={{
+                borderRadius: "1em",
+                border: image === "small4" ? "2px solid orange" : null,
+              }}
               onClick={(e) => handleClickImage(e)}
             />
           </SmallWrapper>
