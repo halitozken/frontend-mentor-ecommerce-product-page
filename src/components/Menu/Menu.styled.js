@@ -7,7 +7,7 @@ export const Container = styled.div`
   top: 0;
   width: 60%;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
 `;
 
 export const Background = styled.div``;

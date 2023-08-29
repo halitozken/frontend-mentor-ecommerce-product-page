@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   position: absolute;
-  top: 22%;
+  top: 14%;
   width: auto;
   height: auto;
   background-color: white;
@@ -13,6 +13,7 @@ export const Container = styled.div`
   right: 1%;
   left: 1%;
   border-radius: 0.5em;
+  z-index: 1;
   @media only screen and (min-width: 768px) {
     position: absolute;
     top: 10%;
@@ -47,6 +48,10 @@ export const ProductWrapper = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
   color: hsl(219, 9%, 45%);
+
+  @media only screen and (max-width: 768px) {
+    justify-content: space-between;
+  }
 `;
 
 export const Wrapper = styled.div`
