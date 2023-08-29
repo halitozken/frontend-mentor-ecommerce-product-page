@@ -5,7 +5,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 8px;
   border-bottom: 1px solid #c4c2c2;
 
   @media only screen and (max-width: 768px) {
@@ -37,7 +37,12 @@ export const MenuItem = styled.a`
   font-size: 14px;
   color: gray;
   font-weight: 400;
-  padding-left: 20px;
+  padding: 0px 20px 20px;
+  cursor: pointer;
+  &:hover {
+    border-bottom: 4px solid orange;
+    color: black;
+  }
 `;
 
 export const Wrapper = styled.div`
