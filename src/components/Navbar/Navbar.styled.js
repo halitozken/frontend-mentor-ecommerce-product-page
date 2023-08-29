@@ -26,6 +26,7 @@ export const MenuArea = styled.div`
 
 export const MobileMenu = styled.div`
   margin-right: 14px;
+  display: none;
 `;
 
 export const MenuItem = styled.a`

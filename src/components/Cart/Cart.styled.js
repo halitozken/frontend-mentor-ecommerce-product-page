@@ -16,7 +16,8 @@ export const Container = styled.div`
   z-index: 1;
   @media only screen and (min-width: 768px) {
     position: absolute;
-    top: 10%;
+    left: 70%;
+    top: 7%;
     right: 5%;
     width: 375px;
     height: auto;
