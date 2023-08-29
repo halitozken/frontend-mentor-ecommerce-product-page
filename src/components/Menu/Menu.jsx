@@ -20,9 +20,8 @@ const Menu = ({ isOpen, SetIsOpen }) => {
 
   return (
     <Container>
-      <Close src={close} alt="" onClick={handleClick} />
-      <Background />
       <MenuWrapper>
+        <Close src={close} alt="" onClick={handleClick} />
         <MenuItem>Collections</MenuItem>
         <MenuItem>Men</MenuItem>
         <MenuItem>Collections</MenuItem>
@@ -30,6 +29,7 @@ const Menu = ({ isOpen, SetIsOpen }) => {
         <MenuItem>About</MenuItem>
         <MenuItem>Contact</MenuItem>
       </MenuWrapper>
+      <Background />
     </Container>
   );
 };

@@ -1,27 +1,32 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  position: absolute;
-  background-color: white;
-  left: 0;
-  top: 0;
-  width: 60%;
+  display: flex;
+  width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 2;
 `;
 
-export const Background = styled.div``;
+export const Background = styled.div`
+  width: 40%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+`;
 
 export const MenuWrapper = styled.div`
-  margin-left: 24px;
-  margin-top: 52px;
+  width: 60%;
+  height: 100%;
+  background-color: white;
 `;
 
 export const Close = styled.img`
-  margin: 24px;
+  margin: 20px;
 `;
 
 export const MenuItem = styled.div`
   font-weight: 700;
-  margin-bottom: 24px;
+  padding: 20px;
 `;
