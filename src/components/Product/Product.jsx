@@ -19,6 +19,8 @@ import {
   PriceDiscount,
   LeftArrow,
   RightArrow,
+  Thumbnail,
+  Wrap,
 } from "./Product.styled";
 
 import big1 from "../../images/image-product-1.jpg";
@@ -51,7 +53,8 @@ const Product = () => {
   };
 
   const handleClick = (e) => {
-    setImage(e.target.className);
+    const image = e.target.className.split(" ")[2];
+    setImage(image);
   };
 
   const handleQuantity = (type) => {
@@ -142,49 +145,63 @@ const Product = () => {
         />
 
         <Images>
-          <img
-            src={small1}
-            alt=""
-            className="image1"
+          <Wrap
             style={{
-              width: "80px",
-              borderRadius: "0.5em",
-              marginRight: "44px",
+              border: image === "image1" ? "4px solid #ff6a00" : null,
+              borderRadius: image === "image1" ? "0.5em" : null,
+              opacity: image === "image1" ? "0.4" : null,
             }}
-            onClick={handleClick}
-          />
-          <img
-            src={small2}
-            alt=""
-            className="image2"
+          >
+            <Thumbnail
+              src={small1}
+              alt=""
+              className="image1"
+              onClick={handleClick}
+            />
+          </Wrap>
+          <Wrap
             style={{
-              width: "80px",
-              borderRadius: "0.5em",
-              marginRight: "44px",
+              border: image === "image2" ? "4px solid #ff6a00" : null,
+              borderRadius: image === "image2" ? "0.5em" : null,
+              opacity: image === "image2" ? "0.4" : null,
             }}
-            onClick={handleClick}
-          />
-          <img
-            src={small3}
-            alt=""
-            className="image3"
+          >
+            <Thumbnail
+              src={small2}
+              alt=""
+              className="image2"
+              onClick={handleClick}
+            />
+          </Wrap>
+
+          <Wrap
             style={{
-              width: "80px",
-              borderRadius: "0.5em",
-              marginRight: "44px",
+              border: image === "image3" ? "4px solid #ff6a00" : null,
+              borderRadius: image === "image3" ? "0.5em" : null,
+              opacity: image === "image3" ? "0.4" : null,
             }}
-            onClick={handleClick}
-          />
-          <img
-            src={small4}
-            alt=""
-            className="image4"
+          >
+            <Thumbnail
+              src={small3}
+              alt=""
+              className="image3"
+              onClick={handleClick}
+            />
+          </Wrap>
+          <Wrap
             style={{
-              width: "80px",
-              borderRadius: "0.5em",
+              border: image === "image4" ? "4px solid #ff6a00" : null,
+              borderRadius: image === "image4" ? "0.5em" : null,
+              opacity: image === "image4" ? "0.4" : null,
             }}
-            onClick={handleClick}
-          />
+          >
+            <Thumbnail
+              src={small4}
+              alt=""
+              className="image4"
+              onClick={handleClick}
+            />
+          </Wrap>
         </Images>
         <RightArrow src={right} onClick={handleRightClick} />
       </ImageWrapper>

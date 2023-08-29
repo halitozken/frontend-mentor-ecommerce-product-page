@@ -28,9 +28,23 @@ export const Image = styled.img`
   }
 `;
 
+export const Thumbnail = styled.img`
+  width: 80px;
+  border-radius: 0.3em;
+
+  &:hover {
+    opacity: 0.6;
+  }
+`;
+
+export const Wrap = styled.div`
+  margin-left: 24px;
+`;
+
 export const Images = styled.div`
   display: flex;
   margin-top: 20px;
+
   @media only screen and (max-width: 768px) {
     display: none;
   }
