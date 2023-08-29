@@ -161,7 +161,7 @@ export const AddToCart = styled.div`
 
 export const LeftArrow = styled.img`
   position: absolute;
-  top: 64%;
+  top: 32%;
   left: 4%;
   background-color: white;
   padding: 5px;
@@ -174,7 +174,7 @@ export const LeftArrow = styled.img`
 export const RightArrow = styled.img`
   position: absolute;
   right: 4%;
-  top: 64%;
+  top: 32%;
   background-color: white;
   padding: 5px;
   border-radius: 50%;

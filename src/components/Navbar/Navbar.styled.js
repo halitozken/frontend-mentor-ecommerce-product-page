@@ -27,6 +27,10 @@ export const MenuArea = styled.div`
 export const MobileMenu = styled.div`
   margin-right: 14px;
   display: none;
+
+  @media only screen and (max-width: 768px) {
+    display: block;
+  }
 `;
 
 export const MenuItem = styled.a`
