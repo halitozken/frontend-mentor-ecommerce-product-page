@@ -21,6 +21,7 @@ import small3 from "../../images/image-product-3-thumbnail.jpg";
 import small4 from "../../images/image-product-4-thumbnail.jpg";
 import leftArrow from "../../images/icon-previous.svg";
 import rightArrow from "../../images/icon-next.svg";
+
 const Carousel = () => {
   const [image, setImage] = useState("small1");
   const dispatch = useDispatch();
@@ -145,7 +146,7 @@ const Carousel = () => {
               width={90}
               style={{
                 borderRadius: "1em",
-                border: image === "small1" ? "2px solid orange" : null,
+                border: image === "small1" ? "4px solid orange" : null,
               }}
               onClick={(e) => handleClickImage(e)}
             />
@@ -158,7 +159,7 @@ const Carousel = () => {
               width={90}
               style={{
                 borderRadius: "1em",
-                border: image === "small2" ? "2px solid orange" : null,
+                border: image === "small2" ? "4px solid orange" : null,
               }}
               onClick={(e) => handleClickImage(e)}
             />
@@ -171,7 +172,7 @@ const Carousel = () => {
               width={90}
               style={{
                 borderRadius: "1em",
-                border: image === "small3" ? "2px solid orange" : null,
+                border: image === "small3" ? "4px solid orange" : null,
               }}
               onClick={(e) => handleClickImage(e)}
             />
@@ -185,7 +186,7 @@ const Carousel = () => {
               width={90}
               style={{
                 borderRadius: "1em",
-                border: image === "small4" ? "2px solid orange" : null,
+                border: image === "small4" ? "4px solid orange" : null,
               }}
               onClick={(e) => handleClickImage(e)}
             />

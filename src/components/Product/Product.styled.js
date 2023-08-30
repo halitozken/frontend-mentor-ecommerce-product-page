@@ -29,8 +29,8 @@ export const Image = styled.img`
 `;
 
 export const Thumbnail = styled.img`
-  width: 80px;
-  border-radius: 0.3em;
+  width: 90px;
+  border-radius: 1em;
 
   &:hover {
     opacity: 0.6;
@@ -51,7 +51,7 @@ export const Images = styled.div`
 `;
 
 export const ProductInfo = styled.div`
-  flex: 1;
+  margin-left: 5%;
 
   @media only screen and (max-width: 768px) {
     margin: 0px 24px;
@@ -194,6 +194,18 @@ export const RightArrow = styled.img`
   border-radius: 50%;
 
   @media only screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const SmallWrapper = styled.div``;
+
+export const Small = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+
+  @media only screen and (max-width: 768px) {
     display: none;
   }
 `;
