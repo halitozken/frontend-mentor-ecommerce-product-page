@@ -198,7 +198,11 @@ export const RightArrow = styled.img`
   }
 `;
 
-export const SmallWrapper = styled.div``;
+export const SmallWrapper = styled.div`
+  &:hover {
+    opacity: 0.4;
+  }
+`;
 
 export const Small = styled.div`
   display: flex;

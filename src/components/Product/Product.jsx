@@ -161,7 +161,6 @@ const Product = () => {
               style={{
                 borderRadius: "1em",
                 border: image === "image1" ? "4px solid orange" : null,
-                opacity: image === "image1" ? "0.4" : null,
               }}
               onClick={(e) => handleClick(e)}
             />
@@ -175,7 +174,6 @@ const Product = () => {
               style={{
                 borderRadius: "1em",
                 border: image === "image2" ? "4px solid orange" : null,
-                opacity: image === "image2" ? "0.4" : null,
               }}
               onClick={(e) => handleClick(e)}
             />
@@ -189,7 +187,6 @@ const Product = () => {
               style={{
                 borderRadius: "1em",
                 border: image === "image3" ? "4px solid orange" : null,
-                opacity: image === "image3" ? "0.4" : null,
               }}
               onClick={(e) => handleClick(e)}
             />
@@ -203,7 +200,6 @@ const Product = () => {
               style={{
                 borderRadius: "1em",
                 border: image === "image4" ? "4px solid orange" : null,
-                opacity: image === "image4" ? "0.4" : null,
               }}
               onClick={(e) => handleClick(e)}
             />
